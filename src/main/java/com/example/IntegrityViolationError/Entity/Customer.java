@@ -14,7 +14,7 @@ public class Customer {
     int id;
     @Column(name = "Name",nullable = false)
     @NotBlank(message = "Name Cannot Be Empty")
-    @Pattern(regexp = "^[a-zA-Z]$",message = "Special Character not allowed in name")
+    @Pattern(regexp = "^[a-zA-Z]+$",message = "Special Character not allowed in name")
     String name;
     @Column(name = "Phone No",unique = true,nullable = false)
     @NotEmpty(message = "Please Enter An Phone No!")
